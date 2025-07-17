@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-@Aspect // Aop 담당 클래스임을 알ㄻ
+@Aspect // Aop 담당 클래스임을 알림
 @Component // Bean 으로 생성, 괸리됨을 알림
 public class AroundAdviceStudyAspect {
 	private static final Logger logger = LoggerFactory.getLogger(AroundAdviceStudyAspect.class);
