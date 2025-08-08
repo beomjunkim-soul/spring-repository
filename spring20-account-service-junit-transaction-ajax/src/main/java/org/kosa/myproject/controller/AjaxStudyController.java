@@ -7,9 +7,44 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class AjaxStudyController {
 	@GetMapping("/test-ajax1")
-	@ResponseBody // ajax 응답을 위한 설정, 페이지가 아니라 필요한 데이터로 응답(text or JSON)
+	@ResponseBody // ajax 응답을 위한 설정, 페이지가 아니라 필요한 데이터로 응답(text or JSON), @ResponseBody 에 포함되어 있음
 	public String textAjax1(String userId) {
-		System.out.println(userId);
-		return "hello ajax"+userId;
+		//System.out.println(userId);
+		try {
+			//서버 로직이 복잡하여 시간 소요가 많이 될 수 있다고 가정
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "hello ajax "+userId;
+	}
+	
+	@GetMapping("/test-ajax2")
+	@ResponseBody // ajax 응답을 위한 설정, 페이지가 아니라 필요한 데이터로 응답(text or JSON)
+	public String textAjax2(String userId) {
+		//System.out.println(userId);
+		try {
+			//서버 로직이 복잡하여 시간 소요가 많이 될 수 있다고 가정
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "hello jQuery ajax "+userId;
+	}
+	
+	@GetMapping("test-ajax3")
+	@ResponseBody // ajax 응답을 위한 설정, 페이지가 아니라 필요한 데이터로 응답(text or JSON)
+	public String textAjax3(String userId) {
+		//System.out.println(userId);
+		try {
+			//서버 로직이 복잡하여 시간 소요가 많이 될 수 있다고 가정
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "hello fetch ajax "+userId;
 	}
 }
